@@ -28,6 +28,8 @@
               "src/assets"
             ],
             "styles": [
+              "src/custom-theme.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -104,6 +106,7 @@
               "tsconfig.spec.json",
               "e2e/tsconfig.json"
             ],
+            "include": ["src/**/*.ts", "tests/**/*.ts"],
             "exclude": [
               "**/node_modules/**"
             ]
