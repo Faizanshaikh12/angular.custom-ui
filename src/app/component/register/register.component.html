@@ -1,0 +1,49 @@
+<div class="container col-md-4 mt-5 bg-light ">
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+    <form  class="p-5" name="form" [formGroup]="form">
+      <h1 class="h3 mb-3 font-weight-bold text-center text-primary">REGISTER FORM</h1>
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control border-primary" name="name"
+               placeholder="Enter name" formControlName="name"
+               [ngClass]="{'is-invalid': form.get('name').touched && form.get('name').invalid}"
+               [(ngModel)]="tutorial.name">
+        <div class="invalid-feedback">
+          <div>Name is required</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Email address</label>
+        <input type="email" class="form-control border-primary" name="email"
+               placeholder="Enter email" formControlName="email"
+               [ngClass]="{'is-invalid': form.get('email').touched && form.get('email').invalid}"
+               [(ngModel)]="tutorial.email" required="">
+        <div *ngIf="form.get('email').touched && form.get('email').invalid" class="invalid-feedback">
+          <div *ngIf="form.get('email').errors.required">Email is required</div>
+          <div *ngIf="form.get('email').errors.email">Email must be a valid email address</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control border-primary" name="password"
+               placeholder="Password" formControlName="password"
+               [ngClass]="{'is-invalid': form.get('password').touched && form.get('password').invalid}"
+               [(ngModel)]="tutorial.password">
+        <div *ngIf="form.get('password').touched && form.get('password').invalid" class="invalid-feedback">
+          <div *ngIf="form.get('password').errors.required">Password is required</div>
+          <div *ngIf="form.get('password').errors['minlength']">Password must be a 6 Character</div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-block btn-primary" [disabled]="!form.valid" (click)="saveTutorial()">Register!</button>
+      <div *ngIf="submitted">
+        <h4>You submitted successfully!</h4>
+        <button class="btn btn-success" (click)="newTutorial()">Add</button>
+      </div>
+    </form>
+  </div>
+    </div>
+  </div>
+
+
+<h1>Faizan</h1>

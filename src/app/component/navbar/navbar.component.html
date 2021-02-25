@@ -1,0 +1,38 @@
+<style>
+    .nav_img{
+        height: 50px;
+        width: 50px;
+        margin: 0px;
+    }
+    a:hover {
+        background-color: rgb(0, 38, 255);
+    }
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-light" style="background: rgb(0, 162, 255);">
+    <a class="navbar-brand text-white" routerLink='customers' routerLinkActive="active"><img class="img-responsive nav_img" src="assets/images/cust-img2.png"> Customers Manager</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link text-white" routerLink='customers' routerLinkActive="active">Customers <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" routerLink='orders' routerLinkActive="active">Orders</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" routerLink='about' routerLinkActive="active">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" routerLink="login" routerLinkActive="active">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" routerLink="register" routerLinkActive="active">Register</a>
+            </li>
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,16 @@
+<div class="col-md-3" *ngFor="let card of cards">
+  <div class="card mb-2 mt-4">
+    <div class="card-header bg-primary d-flex justify-content-between text-white">{{data.name}}<i
+      class="fa fa-edit fa-lg align-items-center d-flex"></i></div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="assets/images/cust-img.png" height="90" width="80">
+        </div>
+        <div class="col-md-4">
+          <span>{{data.city}}<br>{{data.age}}</span><br>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

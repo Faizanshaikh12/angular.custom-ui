@@ -1,0 +1,77 @@
+<style>
+    body {
+        font-family: "fira code";
+        font-weight: bold;
+    }
+
+    .container {
+        margin: 20px;
+        /* font-family: Arial; */
+        font-weight: 200;
+    }
+
+    .cust_ui li {
+        display: inline-block;
+        margin: 20px;
+        color: gray;
+        text-align: left;
+        font-weight: bold;
+        padding-top: 20px;
+    }
+
+
+    .cust_ui li a {
+        color: #000000;
+        text-decoration: none;
+    }
+
+    .cust_ui li a:hover {
+        color: rgb(0, 47, 255);
+    }
+
+    .search-filter {
+        margin-left: 20%;
+    }
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h2><i class="fa fa-user fa-2x" aria-hidden="true"></i> Customers</h2>
+            <div class="customer navbar navbar-expand-lg navbar-light bg-light">
+                <ul class="cust_ui">
+                    <li><a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> Card View</a></li>
+                    <li><a href="#"><i class="fa fa-list" aria-hidden="true"></i> List View</a></li>
+                    <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i> Map View</a></li>
+                    <li><a routerLink="ncustomer"><i class="fa fa-plus" aria-hidden="true"></i> New Customer</a></li>
+                </ul>
+                <div class="search-filter">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Filter" aria-label="Search">
+                        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Filter</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="container">
+                <app-card class="d-flex flex-wrap"></app-card>
+
+                <nav aria-label="..." style="margin-left:15px">
+                    <ul class="pagination">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1">Previous</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
